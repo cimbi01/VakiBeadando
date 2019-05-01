@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Text;
 
 namespace VakiBeadando
@@ -82,8 +81,8 @@ namespace VakiBeadando
             fajl.Close();
             szabalyzat = szabalyzat.Replace("(", ",(,");
             szabalyzat = szabalyzat.Replace(")", ",),");
+            szabalyzat = szabalyzat.Replace(" ", "");
             felbontott_szabalyzat = szabalyzat.Split(',');
-            felbontott_szabalyzat = felbontott_szabalyzat.Where(str => !String.IsNullOrEmpty(str)).ToArray();
             Console.WriteLine(szabalyzat);
             FeladatA();
             FeladatB();
